@@ -1,6 +1,17 @@
+import { FC } from "react";
 import FormLayout from "./FormLayout";
 
-const AddressForm = () => {
+type AddressData = {
+	street: string;
+	city: string;
+	state: string;
+	zip: string;
+};
+type Props = AddressData & {
+	updateFields: (fields: Partial<AddressData>) => void;
+};
+
+const AddressForm: FC<Props> = ({ city, state, street, zip, updateFields }) => {
 	return (
 		<FormLayout title="Address">
 			<label>Street</label>
@@ -8,29 +19,29 @@ const AddressForm = () => {
 				autoFocus
 				required
 				type="text"
-				// value={street}
-				// onChange={e => updateFields({ street: e.target.value })}
+				value={street}
+				onChange={e => updateFields({ street: e.target.value })}
 			/>
 			<label>City</label>
 			<input
 				required
 				type="text"
-				// value={city}
-				// onChange={e => updateFields({ city: e.target.value })}
+				value={city}
+				onChange={e => updateFields({ city: e.target.value })}
 			/>
 			<label>State</label>
 			<input
 				required
 				type="text"
-				// value={state}
-				// onChange={e => updateFields({ state: e.target.value })}
+				value={state}
+				onChange={e => updateFields({ state: e.target.value })}
 			/>
 			<label>Zip</label>
 			<input
 				required
 				type="text"
-				// value={zip}
-				// onChange={e => updateFields({ zip: e.target.value })}
+				value={zip}
+				onChange={e => updateFields({ zip: e.target.value })}
 			/>
 		</FormLayout>
 	);

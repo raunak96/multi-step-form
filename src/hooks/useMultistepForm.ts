@@ -17,7 +17,7 @@ const useMultiStepForm = (steps: ReactElement[]) => {
 		});
 	};
 
-	const goTo = (index: number) => setCurrentStepIndex(index);
+	const goTo = (index: number) => setCurrentStepIndex(index - 1);
 
 	return {
 		currentStepIndex,
