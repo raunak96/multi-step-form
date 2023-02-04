@@ -1,4 +1,5 @@
 import styles from "@/global.module.css";
+import { AccountForm, AddressForm, UserForm } from "./components";
 import useMultiStepForm from "./hooks/useMultistepForm";
 
 const App = () => {
@@ -10,7 +11,7 @@ const App = () => {
 		isLastStep,
 		back,
 		next,
-	} = useMultiStepForm([<div>One</div>, <div>Two</div>, <div>Three</div>]);
+	} = useMultiStepForm([<UserForm />, <AddressForm />, <AccountForm />]);
 
 	return (
 		<div className={styles.card}>

@@ -18,3 +18,38 @@
 	gap: 0.5rem;
 	justify-content: flex-end;
 }
+.formHeading {
+	text-align: center;
+	margin: 0;
+	margin-bottom: 2rem;
+}
+.formContainer {
+	display: grid;
+	gap: 1rem 0.5rem;
+	justify-content: flex-start;
+	align-items: center;
+	grid-template-columns: auto minmax(auto, 400px);
+}
+input {
+	padding: 15px;
+	border-radius: 10px;
+	outline: none;
+	border: 1px solid gray;
+}
+input:focus {
+	border-color: black;
+	border-width: 2px;
+}
+button {
+	padding: 8px;
+	border: 1px solid gray;
+	border-radius: 10px;
+	font-size: 1rem;
+	transition: all 0.2s cubic-bezier(0.075, 0.82, 0.165, 1);
+}
+button:focus,
+button:hover,
+button:active {
+	box-shadow: 1px 0 rgba(0, 0, 0, 0.2);
+	scale: 1.1;
+}
