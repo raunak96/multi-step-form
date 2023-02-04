@@ -1,4 +1,12 @@
+import styles from "@/global.module.css";
+
 const App = () => {
-	return <h1>App</h1>;
+	return (
+		<div className={styles.card}>
+			<form>
+				<div></div>
+			</form>
+		</div>
+	);
 };
 export default App;
